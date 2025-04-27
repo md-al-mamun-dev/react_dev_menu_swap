@@ -10,7 +10,7 @@ const referenceIndex = children.indexOf(referenceElement);
 
 const swapSessionData = JSON.parse(sessionStorage.getItem('swapSession'));
 
-if(swapSessionData){
+if(swapSessionData && swapSessionData.isSwaped){
     if(swapSessionData.communityIndex != communityIndex){
         [children[referenceIndex], children[communityIndex]] = [children[swapSessionData.referenceIndex], children[swapSessionData.communityIndex]];
         menu.innerHTML = '';
